@@ -16,3 +16,4 @@ target폴더안에 tailtag-1.0.0.jar 파일이 생성될것입니다
 OpenAudioMc 플러그인도 plugins 폴더안에 넣으시면
 거리에 따른 마이크 기능을 사용하 실 수 있습니다.
 ---
+config.yml파일을 주석에따라 수정하여 사용하셔도 재밌습니다
