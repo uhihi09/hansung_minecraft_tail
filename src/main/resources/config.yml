@@ -1,0 +1,72 @@
+force:
+  allowed_names:
+    - uhihi0729
+
+tracking:
+  cost_item: DIAMOND
+  duration_seconds: 10
+  particle_color: "#00FFAA"
+  interval_ticks: 5
+
+hunter_alert:
+  enabled: true
+  radius: 25.0
+  interval_ticks: 40
+  sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  volume: 0.6
+  pitch: 1.3
+
+worldborder:
+  enabled: true          # 보더 기능 켜기
+  initial_size: 1000   # 시작 크기(지름, 블록)
+  final_size: 1       # 최종 크기(지름, 블록)
+  shrink_after_seconds: 600        # 시작 후 N초 뒤 축소 시작(예: 10분)
+  shrink_duration_seconds: 600     # 축소에 걸리는 시간(예: 10분 동안 천천히 줄이기)
+  damage_amount: 1.0     # 보더 밖에서 받는 초당 피해량
+  damage_buffer: 2.0     # 보더 경계에서 안쪽 버퍼(블록)
+
+  # 보더 중심(모든 월드에 동일 좌표 적용). 필요 시 월드별로 나누고 싶으면 확장 가능
+  center:
+    x: 0.0
+    z: 0.0
+  # 적용할 월드 이름 명시(가장 확실)
+  apply_worlds:
+    - world
+    - world_nether
+    - world_the_end
+
+  # 또는 환경 기반 자동 선택을 쓰려면 위 목록을 비우고 아래를 사용
+  # apply_environments: [NORMAL, NETHER, THE_END]
+
+  # 게임 종료 시 기본값으로 되돌릴지 여부
+  reset_to_default_on_stop: true
+
+  hud:
+    enabled: true
+    update_interval_ticks: 20
+    last_minute_seconds: 60
+    title_main: "&c마지막 1분!"
+    title_sub: "&e보더가 곧 최종 크기에 도달합니다."
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.2
+
+
+freeze_on_self_death:
+  enabled: true
+  duration_seconds: 120
+
+scatter:
+  enabled: true
+  min_distance_between_players: 20.0
+  border_margin: 10.0
+  slow_falling_seconds: 5
+  attempts_per_player: 80
+
+# [추가] 추종자 자동 텔레포트 설정
+slave:
+  follow_teleport:
+    enabled: true
+    distance: 25.0                # 리더와 이 이상 떨어지면 텔레포트
+    check_interval_ticks: 20      # 주기(틱)
+    cooldown_seconds: 5           # 동일 플레이어 텔레포트 최소 간격

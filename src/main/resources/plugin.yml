@@ -1,0 +1,26 @@
+name: TailTag
+main: dev.uhihi.tailtag.TailTagPlugin
+version: 1.0.0
+api-version: '1.20'
+softdepend:
+  - OpenAudioMc
+author: uhihi0729
+
+commands:
+  tail:
+    description: TailTag game command
+    usage: /tail <join|leave|start|stop|status|help>
+    aliases: [tailtag, tt]
+    permission: tailtag.use
+  voice:
+    description: OpenAudioMc /audio 래퍼 명령
+    usage: /voice
+    permission: tailtag.use
+
+permissions:
+  tailtag.use:
+    default: true
+    description: Use basic TailTag commands
+  tailtag.admin:
+    default: op
+    description: Start/stop TailTag game
