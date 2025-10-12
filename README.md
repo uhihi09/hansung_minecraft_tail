@@ -13,4 +13,6 @@ target폴더안에 tailtag-1.0.0.jar 파일이 생성될것입니다
 /tail leave 게임 나가기
 /tail help 명령어 모음
 ---
-
+OpenAudioMc 플러그인도 plugins 폴더안에 넣으시면
+거리에 따른 마이크 기능을 사용하 실 수 있습니다.
+---
